@@ -1,0 +1,42 @@
+[2017-04-07T08:07:53+01:00] INFO: Started chef-zero at chefzero://localhost:8889 with repository at /root
+  One version per cookbook
+
+[2017-04-07T08:07:53+01:00] INFO: Forking chef instance to converge...
+[2017-04-07T08:07:53+01:00] INFO: *** Chef 12.18.31 ***
+[2017-04-07T08:07:53+01:00] INFO: Platform: x86_64-linux
+[2017-04-07T08:07:53+01:00] INFO: Chef-client pid: 21618
+[2017-04-07T08:07:56+01:00] INFO: Setting the run_list to ["recipe[jboss::default]", "recipe[jboss::default]"] from CLI options
+[2017-04-07T08:07:56+01:00] INFO: Run List is [recipe[jboss::default]]
+[2017-04-07T08:07:56+01:00] INFO: Run List expands to [jboss::default]
+[2017-04-07T08:07:56+01:00] INFO: Starting Chef Run for epplkraw0381t1.budapest.epam.com
+[2017-04-07T08:07:56+01:00] INFO: Running start handlers
+[2017-04-07T08:07:56+01:00] INFO: Start handlers complete.
+[2017-04-07T08:07:56+01:00] INFO: HTTP Request Returned 404 Not Found: Object not found: 
+[2017-04-07T08:07:56+01:00] INFO: Loading cookbooks [jboss@0.1.0, java@1.48.0, apt@6.0.1, windows@3.0.4, homebrew@3.0.0, ohai@5.0.2]
+[2017-04-07T08:07:56+01:00] INFO: Processing log[jdk-version-changed] action nothing (java::notify line 29)
+[2017-04-07T08:07:56+01:00] INFO: Processing yum_package[java-1.7.0-openjdk] action install (java::openjdk line 53)
+[2017-04-07T08:07:59+01:00] INFO: Processing yum_package[java-1.7.0-openjdk-devel] action install (java::openjdk line 53)
+[2017-04-07T08:07:59+01:00] INFO: Processing java_alternatives[set-java-alternatives] action set (java::openjdk line 59)
+[2017-04-07T08:08:02+01:00] INFO: Processing directory[/etc/profile.d] action create (java::set_java_home line 19)
+[2017-04-07T08:08:02+01:00] INFO: Processing template[/etc/profile.d/jdk.sh] action create (java::set_java_home line 23)
+[2017-04-07T08:08:02+01:00] INFO: Processing group[jboss] action create (jboss::install line 1)
+[2017-04-07T08:08:02+01:00] INFO: Processing linux_user[jboss] action create (jboss::install line 5)
+[2017-04-07T08:08:02+01:00] INFO: Processing remote_file[/opt/jboss-as-7.1.1.Final.tar.gz] action create_if_missing (jboss::install line 13)
+[2017-04-07T08:08:02+01:00] INFO: Processing execute[install jboss] action run (jboss::install line 21)
+[2017-04-07T08:08:02+01:00] INFO: Processing execute[jboss folder] action run (jboss::config line 1)
+[2017-04-07T08:08:02+01:00] INFO: Processing template[/etc/jboss-as/jboss-as.conf] action create (jboss::config line 6)
+[2017-04-07T08:08:02+01:00] INFO: Processing template[/etc/init.d/jboss] action create (jboss::config line 18)
+[2017-04-07T08:08:02+01:00] INFO: Processing service[jboss] action enable (jboss::config line 31)
+[2017-04-07T08:08:02+01:00] INFO: Processing service[jboss] action start (jboss::config line 31)
+[2017-04-07T08:08:02+01:00] INFO: Processing yum_package[unzip] action install (jboss::deploy line 1)
+[2017-04-07T08:08:02+01:00] INFO: Processing remote_file[/opt/testweb.zip] action create_if_missing (jboss::deploy line 5)
+[2017-04-07T08:08:02+01:00] INFO: Processing bash[deploy app] action run (jboss::deploy line 13)
+[2017-04-07T08:08:02+01:00] INFO: Chef Run complete in 6.251992633 seconds
+[2017-04-07T08:08:02+01:00] INFO: Running report handlers
+[2017-04-07T08:08:02+01:00] INFO: Report handlers complete
+Testing Test Application (curl localhost:8080/testweb/)
+<html>
+<body>
+<h2>Welcome to Test Web Application !!!!!!!!!!!  </h2>
+</body>
+</html>
