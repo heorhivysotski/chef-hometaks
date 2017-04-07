@@ -22,7 +22,7 @@ json_attribs "/root/.chef/runlist.json"
 ```
 ## Report.txt
 ```bash
-[root@epplkraw0381t1 cookbooks]# curl 127.0.0.1:8080/testweb/ 
+[root@epplkraw0381t1 cookbooks]$ curl 127.0.0.1:8080/testweb/ 
 <html>
 <body>
 <h2>Welcome to Test Web Application !!!!!!!!!!!  </h2>
