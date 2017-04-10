@@ -1,0 +1,12 @@
+log_level                :info
+log_location             STDOUT
+node_name                'heorhivysotski'
+client_key               '/home/student/.chef/heorhivysotski.pem'
+#validation_client_name   'lab'
+validation_key           '/home/student/none'
+chef_server_url          'https://node-server/organizations/dolab'
+syntax_check_cache_path  '/root/.chef/syntax_check_cache'
+cookbook_path '/tmp/chef/cookbooks'
+ssl_verify_mode :verify_none
+#verify_api_cert :false
+#ssl_verify_mode :verify_none
