@@ -9,7 +9,8 @@ env_run_lists:
 json_class:          Chef::Role
 name:                Appserver
 override_attributes:
-run_list:            recipe[my_jboss]
+run_list:            recipe[ my_jboss ]
+
 ```
 
 ## Chev-dev
