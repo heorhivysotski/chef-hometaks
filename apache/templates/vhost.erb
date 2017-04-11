@@ -1,4 +1,5 @@
 <IfModule mod_rewrite.c>
+ServerName 127.0.0.1
 RewriteEngine On
 RewriteCond <%= @maintenance_file %> -f
 RewriteCond %{SCRIPT_FILENAME} !/maintenance.html
